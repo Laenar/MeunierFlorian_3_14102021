@@ -14,6 +14,15 @@ section {
   margin: auto;
 }
 
+footer {
+  background-color: black;
+  color: white;
+}
+footer a {
+  text-decoration: none;
+  color: whites;
+}
+
 .divResto {
   width: 100%;
 }
@@ -21,10 +30,19 @@ section {
   width: 100%;
   object-fit: cover;
 }
-.divResto a {
-  width: 80%;
-  background-color: #9356DC;
-  color: white;
+
+.secFace {
+  width: 100%;
+}
+.secFace aside {
+  width: 90%;
+  margin: auto;
+}
+
+.plocalisation {
+  margin: 0;
+  font-size: 1.5em;
+  background-color: #eaeaea;
 }
 
 /*# sourceMappingURL=style.css.map */

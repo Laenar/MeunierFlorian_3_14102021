@@ -1,6 +1,7 @@
 $violet :#9356DC;
 $rose : #ff79da;
 $cyan : #99e2d0;
+$argent : rgb(234,234,234);
 
 body {
     margin: 0;
@@ -16,16 +17,34 @@ section {
     margin: auto;
 }
 
+footer {
+    background-color: black;
+    color: white;
+    a {
+        text-decoration: none;
+        color: whites;
+    }
+}
+
 .divResto {
     width: 100%;
     img {
         width: 100%;
         object-fit: cover;
     }
-    a {
-        width: 80%;
-        background-color: $violet;
-        color: white;
+}
+
+.secFace {
+    width: 100%;
+    aside {
+        width: 90%;
+        margin : auto;
     }
+}
+
+.plocalisation {
+    margin: 0;
+    font-size: 1.5em;
+    background-color: $argent ;
 }
 
