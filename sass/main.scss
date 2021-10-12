@@ -1,0 +1,31 @@
+$violet :#9356DC;
+$rose : #ff79da;
+$cyan : #99e2d0;
+
+body {
+    margin: 0;
+    font-size: 2.5em;
+    text-align: center;
+}
+header {
+    padding-top: 2%;
+    font-size: 3em;
+}
+section {
+    width: 90%;
+    margin: auto;
+}
+
+.divResto {
+    width: 100%;
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+    a {
+        width: 80%;
+        background-color: $violet;
+        color: white;
+    }
+}
+
