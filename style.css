@@ -17,10 +17,20 @@ section {
 footer {
   background-color: black;
   color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 footer a {
   text-decoration: none;
-  color: whites;
+  color: white;
+  width: 100%;
+}
+footer nav {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  text-align: left;
+  margin: auto;
 }
 
 .divResto {
