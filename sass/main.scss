@@ -10,13 +10,17 @@ $shadowSetting : 6px 6px 6px 6px rgba(0,0,0,0.1);
 
 body {
     margin: 0;
-    font-size: 2.5em;
+    //font-size: 2.5em;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
 header {
     padding-top: 2%;
-    font-size: 3em;
+    //font-size: 3em;
+    img {
+        width: 50%;
+        padding: 5px;
+    }
 }
 section {
     width: 90%;
@@ -47,7 +51,7 @@ footer {
         margin: auto;
         img {
             filter: invert(100%);
-            width: max-content;
+            width: 45%;
             margin-bottom: 30px;
             margin-top: 30px;
         }
@@ -65,13 +69,13 @@ footer {
     box-shadow: $shadowSetting;
     text-align: left;
     margin-bottom: 40px;
-    padding-bottom: 20px;
+    height: 250px;
     
     img {
         border-top-left-radius: $radiusSize;
         border-top-right-radius: $radiusSize;
         width: 100%;
-        max-height: 400px;
+        max-height: 70%;
         object-fit: cover;
     }
     h3, p {
@@ -83,7 +87,10 @@ footer {
         display: flex;
         justify-content: space-between;
         div {
-            width: 49%;
+            width: auto;
+            i {
+                margin-right: 20px;
+            }
         }
     }
 }
@@ -99,7 +106,7 @@ footer {
         background-color: $violet;
         color: white;
         padding: 20px;
-        font-size: 1.5em;
+        //font-size: 1.5em;
         border-radius: $largeradiusSize;
     }
     
@@ -112,14 +119,14 @@ footer {
         padding: 30px;
         border-radius: $radiusSize;
         background-color: $argent;
-        width: 86%;
+        width: -moz-available;
         margin: auto;
         margin-bottom:20px ;
     }
 }
 .plocalisation {
     margin: 0;
-    font-size: 1.5em;
+    //font-size: 1.5em;
     background-color: $argent ;
 }
 
