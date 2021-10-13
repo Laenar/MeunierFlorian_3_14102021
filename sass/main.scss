@@ -32,10 +32,12 @@ footer {
     color: white;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-top: 60px;
     a {
         text-decoration: none;
         color: white;
         width: 100%;
+        margin-bottom: 15px;
     }
     nav {
         display: flex;
@@ -46,6 +48,11 @@ footer {
         img {
             filter: invert(100%);
             width: max-content;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        i {
+            width: 50px;
         }
     }
 
