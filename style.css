@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-size: 2.2em;
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
@@ -73,6 +74,8 @@ footer nav i {
 .divResto .div_info_carte {
   display: flex;
   justify-content: space-between;
+  height: 30%;
+  align-items: center;
 }
 .divResto .div_info_carte div {
   width: auto;
@@ -111,6 +114,27 @@ footer nav i {
 .plocalisation {
   margin: 0;
   background-color: #eaeaea;
+}
+
+@media screen and (max-height: 650px) {
+  .divResto {
+    height: 250px;
+  }
+}
+@media screen and (min-height: 651px) {
+  .divResto {
+    height: 450px;
+  }
+}
+@media screen and (min-height: 801px) {
+  .divResto {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 1.2em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
