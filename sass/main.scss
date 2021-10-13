@@ -43,6 +43,10 @@ footer {
         width: 90%;
         text-align: left;
         margin: auto;
+        img {
+            filter: invert(100%);
+            width: max-content;
+        }
     }
 
 
@@ -55,6 +59,7 @@ footer {
     text-align: left;
     margin-bottom: 40px;
     padding-bottom: 20px;
+    
     img {
         border-top-left-radius: $radiusSize;
         border-top-right-radius: $radiusSize;
@@ -65,6 +70,14 @@ footer {
     h3, p {
         margin: 0;
         margin-left: 30px;
+    }
+
+    .div_info_carte {
+        display: flex;
+        justify-content: space-between;
+        div {
+            width: 49%;
+        }
     }
 }
 

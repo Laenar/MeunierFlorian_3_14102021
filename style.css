@@ -37,6 +37,10 @@ footer nav {
   text-align: left;
   margin: auto;
 }
+footer nav img {
+  filter: invert(100%);
+  width: max-content;
+}
 
 .divResto {
   width: 100%;
@@ -56,6 +60,13 @@ footer nav {
 .divResto h3, .divResto p {
   margin: 0;
   margin-left: 30px;
+}
+.divResto .div_info_carte {
+  display: flex;
+  justify-content: space-between;
+}
+.divResto .div_info_carte div {
+  width: 49%;
 }
 
 .secFace {
