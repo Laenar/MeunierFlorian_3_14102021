@@ -105,10 +105,10 @@ footer {
         
     }
     a {
-        background-color: $violet;
+        background: linear-gradient($rose, $violet);
         color: white;
         padding: 20px;
-        //font-size: 1.5em;
+        font-size: 1.5em;
         border-radius: $largeradiusSize;
     }
     

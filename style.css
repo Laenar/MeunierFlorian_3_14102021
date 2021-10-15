@@ -92,9 +92,10 @@ footer nav i {
   margin: auto;
 }
 .secFace a {
-  background-color: #9356DC;
+  background: linear-gradient(#ff79da, #9356DC);
   color: white;
   padding: 20px;
+  font-size: 1.5em;
   border-radius: 80px;
 }
 
