@@ -14,6 +14,9 @@ body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
+img {
+    object-fit: cover;
+}
 header {
     padding-top: 2%;
     //font-size: 3em;
@@ -109,7 +112,7 @@ footer {
         color: white;
         padding: 20px;
         font-size: 1.5em;
-        border-radius: $largeradiusSize;
+        border-radius: $largeradiusSize; 
     }
     
 }
@@ -130,6 +133,28 @@ footer {
     margin: 0;
     //font-size: 1.5em;
     background-color: $argent ;
+}
+
+
+.secmea {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    .imgAvant {
+        width: 100%;
+    }
+}
+.secmenu {
+    position: relative;
+    z-index: 20;
+    margin-top: -11%;
+    border-top-right-radius: $largeradiusSize;
+    border-top-left-radius: $largeradiusSize;
+    box-shadow: $shadowSetting;
+    width: 100%;
+    padding-top: 40px;
+    background-color: white;
+
 }
 
 @media screen and (max-height: 650px)
