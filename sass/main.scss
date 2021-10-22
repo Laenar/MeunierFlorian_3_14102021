@@ -145,16 +145,53 @@ footer
         width: 100%;
     }
 }
-.secmenu {
+.secmenu // Section pricipal utiliser dans la page menu pour afficher le contenue de la page
+{
     position: relative;
     z-index: 20;
     margin-top: -11%;
     border-top-right-radius: $largeradiusSize;
     border-top-left-radius: $largeradiusSize;
-    box-shadow: $shadowSetting;
     width: 100%;
     padding-top: 40px;
     background-color: white;
+
+    h1,h2 {
+        text-align: left;
+        padding-left: 3.5%;
+
+    }
+
+    aside {
+        font-size: 0.9em;
+    }
+
+    .divItem // Ici on retrouve le sass qui est lié au carte des plats 
+    {
+        width: 90%;
+        margin: auto;
+        box-shadow: $shadowSetting;
+        border-radius: $largeradiusSize;
+        text-align: left;
+        margin-bottom: 6%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: larger;
+        h3,p {
+            margin: 2%;
+        }
+
+        p {
+            width: fit-content;
+            margin-top: 1%;
+        }
+
+        h3 {
+            width: 100%;
+            margin-bottom: 1%;
+        }
+    }
 
 }
 

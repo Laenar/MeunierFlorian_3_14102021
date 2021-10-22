@@ -136,10 +136,39 @@ footer nav i {
   margin-top: -11%;
   border-top-right-radius: 80px;
   border-top-left-radius: 80px;
-  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   padding-top: 40px;
   background-color: white;
+}
+.secmenu h1, .secmenu h2 {
+  text-align: left;
+  padding-left: 3.5%;
+}
+.secmenu aside {
+  font-size: 0.9em;
+}
+.secmenu .divItem {
+  width: 90%;
+  margin: auto;
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 80px;
+  text-align: left;
+  margin-bottom: 6%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: larger;
+}
+.secmenu .divItem h3, .secmenu .divItem p {
+  margin: 2%;
+}
+.secmenu .divItem p {
+  width: fit-content;
+  margin-top: 1%;
+}
+.secmenu .divItem h3 {
+  width: 100%;
+  margin-bottom: 1%;
 }
 
 @media screen and (max-height: 650px) {
