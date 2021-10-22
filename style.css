@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  font-size: 2.2em;
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
@@ -9,21 +8,13 @@ img {
   object-fit: cover;
 }
 
-header {
-  padding-top: 2%;
-}
-header img {
-  width: 50%;
-  padding: 5px;
+a {
+  text-decoration: none;
 }
 
 section {
   width: 90%;
   margin: auto;
-}
-
-a {
-  text-decoration: none;
 }
 
 footer {
@@ -61,8 +52,6 @@ footer nav i {
   border-radius: 40px;
   box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
   text-align: left;
-  margin-bottom: 40px;
-  height: 250px;
 }
 .divResto img {
   border-top-left-radius: 40px;
@@ -73,7 +62,6 @@ footer nav i {
 }
 .divResto h3, .divResto p {
   margin: 0;
-  margin-left: 30px;
 }
 .divResto .div_info_carte {
   display: flex;
@@ -83,9 +71,6 @@ footer nav i {
 }
 .divResto .div_info_carte div {
   width: auto;
-}
-.divResto .div_info_carte div i {
-  margin-right: 20px;
 }
 
 .secFace {
@@ -98,84 +83,9 @@ footer nav i {
 .secFace a {
   background: linear-gradient(#ff79da, #9356DC);
   color: white;
-  padding: 20px;
-  font-size: 1.5em;
   border-radius: 80px;
 }
 
-.asiFaceB {
-  text-align: left;
-}
-.asiFaceB div {
-  text-align: center;
-  padding: 30px;
-  border-radius: 40px;
-  background-color: #eaeaea;
-  width: -moz-available;
-  margin: auto;
-  margin-bottom: 20px;
-}
-
-.plocalisation {
-  margin: 0;
-  background-color: #eaeaea;
-}
-
-.secmea {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-}
-.secmea .imgAvant {
-  width: 100%;
-}
-
-.secmenu {
-  position: relative;
-  z-index: 20;
-  margin-top: -11%;
-  border-top-right-radius: 80px;
-  border-top-left-radius: 80px;
-  width: 100%;
-  padding-top: 40px;
-  background-color: white;
-}
-.secmenu h1, .secmenu h2 {
-  text-align: left;
-  padding-left: 3.5%;
-}
-.secmenu aside {
-  font-size: 0.9em;
-}
-.secmenu .divItem {
-  width: 90%;
-  margin: auto;
-  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 80px;
-  text-align: left;
-  margin-bottom: 6%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-size: larger;
-}
-.secmenu .divItem h3, .secmenu .divItem p {
-  margin: 2%;
-}
-.secmenu .divItem p {
-  width: fit-content;
-  margin-top: 1%;
-}
-.secmenu .divItem h3 {
-  width: 100%;
-  margin-bottom: 1%;
-}
-
-@media screen and (max-height: 650px) {
-  .divResto {
-    height: 250px;
-  }
-}
 @media screen and (min-height: 651px) {
   .divResto {
     height: 450px;
@@ -189,6 +99,113 @@ footer nav i {
 @media screen and (max-width: 400px) {
   body {
     font-size: 1.2em;
+  }
+}
+@media all and (max-device-width: 650px) {
+  body {
+    font-size: 2.2em;
+  }
+
+  header {
+    padding-top: 2%;
+  }
+  header img {
+    width: 50%;
+    padding: 5px;
+  }
+
+  .divResto {
+    margin-bottom: 40px;
+    height: 300px;
+  }
+  .divResto img {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    width: 100%;
+    max-height: 70%;
+    object-fit: cover;
+  }
+  .divResto h3, .divResto p {
+    margin-left: 30px;
+  }
+  .divResto .div_info_carte {
+    margin-top: -10px;
+  }
+  .divResto .div_info_carte div i {
+    margin-right: 20px;
+  }
+
+  .secFace a {
+    padding: 20px;
+    font-size: 1.5em;
+  }
+
+  .asiFaceB {
+    text-align: left;
+  }
+  .asiFaceB div {
+    text-align: center;
+    padding: 30px;
+    border-radius: 40px;
+    background-color: #eaeaea;
+    width: -moz-available;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .plocalisation {
+    margin: 0;
+    background-color: #eaeaea;
+  }
+
+  .secmea {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+  }
+  .secmea .imgAvant {
+    width: 100%;
+  }
+
+  .secmenu {
+    position: relative;
+    z-index: 20;
+    margin-top: -11%;
+    border-top-right-radius: 80px;
+    border-top-left-radius: 80px;
+    width: 100%;
+    padding-top: 40px;
+    background-color: white;
+  }
+  .secmenu h1, .secmenu h2 {
+    text-align: left;
+    padding-left: 3.5%;
+  }
+  .secmenu aside {
+    font-size: 0.9em;
+  }
+  .secmenu .divItem {
+    width: 90%;
+    margin: auto;
+    box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 80px;
+    text-align: left;
+    margin-bottom: 6%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: larger;
+  }
+  .secmenu .divItem h3, .secmenu .divItem p {
+    margin: 2%;
+  }
+  .secmenu .divItem p {
+    width: fit-content;
+    margin-top: 1%;
+  }
+  .secmenu .divItem h3 {
+    width: 100%;
+    margin-bottom: 1%;
   }
 }
 

@@ -8,32 +8,25 @@ $radiusSize : 40px;
 $largeradiusSize : 80px;
 $shadowSetting : 6px 6px 6px 6px rgba(0,0,0,0.1);
 
-body {
+body 
+{
     margin: 0;
-    font-size: 2.2em;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
-img {
+img 
+{
     object-fit: cover;
 }
-header {
-    padding-top: 2%;
-    //font-size: 3em;
-    img {
-        width: 50%;
-        padding: 5px;
-    }
+a 
+{
+    text-decoration: none;
 }
-section {
+section 
+{
     width: 90%;
     margin: auto;
 }
-
-a {
-    text-decoration: none;
-}
-
 footer 
 {
     background-color: $lightblack ;
@@ -63,17 +56,15 @@ footer
             width: 50px;
         }
     }
-
-
 }
 
-.divResto {
+
+.divResto 
+{
     width: 100%;
     border-radius: $radiusSize;
     box-shadow: $shadowSetting;
     text-align: left;
-    margin-bottom: 40px;
-    height: 250px;
     
     img {
         border-top-left-radius: $radiusSize;
@@ -84,7 +75,6 @@ footer
     }
     h3, p {
         margin: 0;
-        margin-left: 30px;
     }
 
     .div_info_carte {
@@ -94,9 +84,6 @@ footer
         align-items: center;
         div {
             width: auto;
-            i {
-                margin-right: 20px;
-            }
         }
     }
 }
@@ -111,96 +98,14 @@ footer
     a {
         background: linear-gradient($rose, $violet);
         color: white;
-        padding: 20px;
-        font-size: 1.5em;
         border-radius: $largeradiusSize; 
     }
     
 }
-.asiFaceB {
-    text-align: left;
-
-    div {
-        text-align: center;
-        padding: 30px;
-        border-radius: $radiusSize;
-        background-color: $argent;
-        width: -moz-available;
-        margin: auto;
-        margin-bottom:20px ;
-    }
-}
-.plocalisation {
-    margin: 0;
-    //font-size: 1.5em;
-    background-color: $argent ;
-}
 
 
-.secmea {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    .imgAvant {
-        width: 100%;
-    }
-}
-.secmenu // Section pricipal utiliser dans la page menu pour afficher le contenue de la page
-{
-    position: relative;
-    z-index: 20;
-    margin-top: -11%;
-    border-top-right-radius: $largeradiusSize;
-    border-top-left-radius: $largeradiusSize;
-    width: 100%;
-    padding-top: 40px;
-    background-color: white;
 
-    h1,h2 {
-        text-align: left;
-        padding-left: 3.5%;
 
-    }
-
-    aside {
-        font-size: 0.9em;
-    }
-
-    .divItem // Ici on retrouve le sass qui est lié au carte des plats 
-    {
-        width: 90%;
-        margin: auto;
-        box-shadow: $shadowSetting;
-        border-radius: $largeradiusSize;
-        text-align: left;
-        margin-bottom: 6%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        font-size: larger;
-        h3,p {
-            margin: 2%;
-        }
-
-        p {
-            width: fit-content;
-            margin-top: 1%;
-        }
-
-        h3 {
-            width: 100%;
-            margin-bottom: 1%;
-        }
-    }
-
-}
-
-@media screen and (max-height: 650px)
-{
-    .divResto {
-        height: 250px;
-    }
-}
 @media screen and (min-height: 651px) //and (max-height: 900px) 
 {
     .divResto {
@@ -218,5 +123,141 @@ footer
 {
     body {
         font-size: 1.2em;
+    }
+}
+
+@media all and (max-device-width: 1024px)
+{
+
+}
+
+@media all and (max-device-width: 650px)
+{
+    body {
+        font-size: 2.2em;
+    }
+    header {
+        padding-top: 2%;
+        //font-size: 3em;
+        img {
+            width: 50%;
+            padding: 5px;
+        }
+    }
+    
+    .divResto {
+        margin-bottom: 40px;
+        height: 300px;
+        
+        img {
+            border-top-left-radius: $radiusSize;
+            border-top-right-radius: $radiusSize;
+            width: 100%;
+            max-height: 70%;
+            object-fit: cover;
+        }
+        h3, p {
+            margin-left: 30px;
+        }
+    
+        .div_info_carte {
+            margin-top: -10px;
+            div {
+                
+                i {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    
+    .secFace {
+        a {
+            padding: 20px;
+            font-size: 1.5em;
+        }
+    }
+
+
+
+
+    .asiFaceB {
+        text-align: left;
+    
+        div {
+            text-align: center;
+            padding: 30px;
+            border-radius: $radiusSize;
+            background-color: $argent;
+            width: -moz-available;
+            margin: auto;
+            margin-bottom:20px ;
+        }
+    }
+    .plocalisation {
+        margin: 0;
+        //font-size: 1.5em;
+        background-color: $argent ;
+    }
+    
+    
+    .secmea {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        .imgAvant {
+            width: 100%;
+        }
+    }
+
+
+    .secmenu // Section pricipal utiliser dans la page menu pour afficher le contenue de la page
+    {
+        position: relative;
+        z-index: 20;
+        margin-top: -11%;
+        border-top-right-radius: $largeradiusSize;
+        border-top-left-radius: $largeradiusSize;
+        width: 100%;
+        padding-top: 40px;
+        background-color: white;
+    
+        h1,h2 {
+            text-align: left;
+            padding-left: 3.5%;
+    
+        }
+    
+        aside {
+            font-size: 0.9em;
+        }
+    
+        .divItem // Ici on retrouve le sass qui est lié au carte des plats 
+        {
+            width: 90%;
+            margin: auto;
+            box-shadow: $shadowSetting;
+            border-radius: $largeradiusSize;
+            text-align: left;
+            margin-bottom: 6%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-size: larger;
+            h3,p {
+                margin: 2%;
+            }
+    
+            p {
+                width: fit-content;
+                margin-top: 1%;
+            }
+    
+            h3 {
+                width: 100%;
+                margin-bottom: 1%;
+            }
+        }
+    
     }
 }
