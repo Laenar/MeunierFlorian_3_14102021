@@ -86,19 +86,81 @@ footer nav i {
   border-radius: 80px;
 }
 
-@media screen and (min-height: 651px) {
-  .divResto {
-    height: 450px;
-  }
+.asiFaceB {
+  text-align: left;
 }
+.asiFaceB div {
+  text-align: center;
+  padding: 30px;
+  border-radius: 40px;
+  background-color: #eaeaea;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.plocalisation {
+  margin: 0;
+  background-color: #eaeaea;
+}
+
+.secmea {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+.secmea .imgAvant {
+  width: 100%;
+}
+
+.secmenu {
+  position: relative;
+  z-index: 20;
+  margin-top: -11%;
+  border-top-right-radius: 80px;
+  border-top-left-radius: 80px;
+  width: 100%;
+  padding-top: 40px;
+  background-color: white;
+}
+.secmenu h1, .secmenu h2 {
+  text-align: left;
+  padding-left: 3.5%;
+}
+.secmenu aside {
+  font-size: 0.9em;
+}
+.secmenu .divItem {
+  width: 90%;
+  margin: auto;
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 80px;
+  text-align: left;
+  margin-bottom: 6%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: larger;
+}
+.secmenu .divItem h3, .secmenu .divItem p {
+  margin: 2%;
+}
+.secmenu .divItem p {
+  width: fit-content;
+  margin-top: 1%;
+}
+.secmenu .divItem h3 {
+  width: 100%;
+  margin-bottom: 1%;
+}
+
 @media screen and (min-height: 801px) {
   .divResto {
     height: 600px;
   }
 }
-@media screen and (max-width: 400px) {
-  body {
-    font-size: 1.2em;
+@media screen and (min-height: 651px) {
+  .divResto {
+    height: 450px;
   }
 }
 @media all and (max-device-width: 650px) {
@@ -140,72 +202,78 @@ footer nav i {
     font-size: 1.5em;
   }
 
-  .asiFaceB {
-    text-align: left;
-  }
   .asiFaceB div {
-    text-align: center;
-    padding: 30px;
-    border-radius: 40px;
-    background-color: #eaeaea;
     width: -moz-available;
-    margin: auto;
-    margin-bottom: 20px;
   }
-
-  .plocalisation {
-    margin: 0;
-    background-color: #eaeaea;
+}
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 1.2em;
   }
-
-  .secmea {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-  }
-  .secmea .imgAvant {
-    width: 100%;
-  }
-
-  .secmenu {
-    position: relative;
-    z-index: 20;
-    margin-top: -11%;
-    border-top-right-radius: 80px;
-    border-top-left-radius: 80px;
-    width: 100%;
-    padding-top: 40px;
-    background-color: white;
-  }
-  .secmenu h1, .secmenu h2 {
-    text-align: left;
-    padding-left: 3.5%;
-  }
-  .secmenu aside {
-    font-size: 0.9em;
-  }
-  .secmenu .divItem {
-    width: 90%;
-    margin: auto;
-    box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 80px;
-    text-align: left;
-    margin-bottom: 6%;
+}
+@media all and (min-width: 1024px) {
+  section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    font-size: larger;
+    justify-content: space-around;
   }
-  .secmenu .divItem h3, .secmenu .divItem p {
+
+  .divResto {
+    height: 330px;
+    width: 25%;
     margin: 2%;
   }
-  .secmenu .divItem p {
-    width: fit-content;
-    margin-top: 1%;
+
+  .divResto .div_info_carte div {
+    width: auto;
+    margin: 5%;
   }
-  .secmenu .divItem h3 {
+
+  footer nav img {
+    filter: invert(100%);
+    width: 10%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .asiFaceB {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .asiFaceB h2 {
     width: 100%;
-    margin-bottom: 1%;
+    margin-bottom: 50px;
+  }
+  .asiFaceB div {
+    width: 25%;
+    margin: initial;
+  }
+
+  .secFace {
+    font-size: 1.8em;
+  }
+  .secFace .div_loca {
+    width: 100%;
+  }
+  .secFace a {
+    padding: 20px;
+  }
+
+  .secmenu aside {
+    width: 28%;
+  }
+  .secmenu h1 {
+    width: 100%;
+  }
+  .secmenu .divItem {
+    padding: 5px;
+    border-radius: 30px;
+  }
+
+  .secmea img {
+    object-position: bottom;
+    height: 800px;
   }
 }
 

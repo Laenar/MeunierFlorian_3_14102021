@@ -102,35 +102,99 @@ footer
     }
     
 }
+.asiFaceB {
+    text-align: left;
 
-
-
-
-@media screen and (min-height: 651px) //and (max-height: 900px) 
-{
-    .divResto {
-        height: 450px;
+    div {
+        text-align: center;
+        padding: 30px;
+        border-radius: $radiusSize;
+        background-color: $argent;
+        margin: auto;
+        margin-bottom:20px ;
     }
 }
+
+.plocalisation {
+    margin: 0;
+    //font-size: 1.5em;
+    background-color: $argent ;
+}
+
+.secmea {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    .imgAvant {
+        width: 100%;
+    }
+}
+
+.secmenu // Section pricipal utiliser dans la page menu pour afficher le contenue de la page
+    {
+        position: relative;
+        z-index: 20;
+        margin-top: -11%;
+        border-top-right-radius: $largeradiusSize;
+        border-top-left-radius: $largeradiusSize;
+        width: 100%;
+        padding-top: 40px;
+        background-color: white;
+    
+        h1,h2 {
+            text-align: left;
+            padding-left: 3.5%;
+    
+        }
+    
+        aside {
+            font-size: 0.9em;
+        }
+    
+        .divItem // Ici on retrouve le sass qui est lié au carte des plats 
+        {
+            width: 90%;
+            margin: auto;
+            box-shadow: $shadowSetting;
+            border-radius: $largeradiusSize;
+            text-align: left;
+            margin-bottom: 6%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-size: larger;
+            h3,p {
+                margin: 2%;
+            }
+    
+            p {
+                width: fit-content;
+                margin-top: 1%;
+            }
+    
+            h3 {
+                width: 100%;
+                margin-bottom: 1%;
+            }
+        }
+    
+    }
+
+
+
+
 @media screen and (min-height: 801px) //and (max-height: 900px) 
 {
     .divResto {
         height: 600px;
     }
 }
-
-@media screen and (max-width: 400px) //and (max-height: 900px) 
+@media screen and (min-height: 651px) //and (max-height: 900px) 
 {
-    body {
-        font-size: 1.2em;
+    .divResto {
+        height: 450px;
     }
 }
-
-@media all and (max-device-width: 1024px)
-{
-
-}
-
 @media all and (max-device-width: 650px)
 {
     body {
@@ -180,84 +244,96 @@ footer
 
 
 
-
-    .asiFaceB {
-        text-align: left;
-    
+    .asiFaceB {   
         div {
-            text-align: center;
-            padding: 30px;
-            border-radius: $radiusSize;
-            background-color: $argent;
             width: -moz-available;
-            margin: auto;
-            margin-bottom:20px ;
         }
     }
-    .plocalisation {
-        margin: 0;
-        //font-size: 1.5em;
-        background-color: $argent ;
+
+
+    
+
+    
+    
+
+
+    
+}
+@media screen and (max-width: 400px) //and (max-height: 900px) 
+{
+    body {
+        font-size: 1.2em;
     }
-    
-    
-    .secmea {
-        position: relative;
-        z-index: 10;
-        width: 100%;
-        .imgAvant {
+}
+@media all and (min-width: 1024px)
+{
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .divResto {
+        height: 330px;
+        width: 25%;
+        margin: 2%;
+    }
+
+    .divResto .div_info_carte div {
+        width: auto;
+        margin: 5%;
+    }
+
+    footer nav img {
+        filter: invert(100%);
+        width: 10%;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .asiFaceB {   
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        h2 {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        div {
+            width: 25%;
+            margin: initial
+        }
+    }
+
+    .secFace {
+        font-size: 1.8em;
+        .div_loca {
             width: 100%;
         }
+        a {
+            padding: 20px;
+        }
     }
 
-
-    .secmenu // Section pricipal utiliser dans la page menu pour afficher le contenue de la page
-    {
-        position: relative;
-        z-index: 20;
-        margin-top: -11%;
-        border-top-right-radius: $largeradiusSize;
-        border-top-left-radius: $largeradiusSize;
-        width: 100%;
-        padding-top: 40px;
-        background-color: white;
-    
-        h1,h2 {
-            text-align: left;
-            padding-left: 3.5%;
-    
-        }
-    
+    .secmenu {
         aside {
-            font-size: 0.9em;
+            width: 28%;
         }
-    
-        .divItem // Ici on retrouve le sass qui est lié au carte des plats 
-        {
-            width: 90%;
-            margin: auto;
-            box-shadow: $shadowSetting;
-            border-radius: $largeradiusSize;
-            text-align: left;
-            margin-bottom: 6%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            font-size: larger;
-            h3,p {
-                margin: 2%;
-            }
-    
-            p {
-                width: fit-content;
-                margin-top: 1%;
-            }
-    
-            h3 {
-                width: 100%;
-                margin-bottom: 1%;
-            }
+        h1 {
+            width: 100%;
         }
-    
+        .divItem {
+            padding: 5px;
+            border-radius: 30px;
+        }
     }
+
+    .secmea {
+        img {
+            object-position: bottom;
+            height: 800px;
+        }
+    }
+
+
 }
