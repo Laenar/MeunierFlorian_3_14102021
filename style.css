@@ -112,6 +112,25 @@ footer nav i {
   width: 100%;
 }
 
+header {
+  padding-top: 10px;
+}
+header div {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  font-size: 1.5em;
+}
+header i {
+  color: black;
+}
+
+h2 div {
+  background-color: #99e2d0;
+  width: 30px;
+  height: 5px;
+}
+
 .secmenu {
   position: relative;
   z-index: 20;
