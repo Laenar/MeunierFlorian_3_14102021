@@ -153,7 +153,7 @@ h2 div {
   width: 90%;
   margin: auto;
   box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 80px;
+  border-radius: 40px;
   text-align: left;
   margin-bottom: 6%;
   display: flex;
@@ -208,6 +208,9 @@ h2 div {
     width: 50%;
     padding: 5px;
   }
+  header div {
+    top: 2%;
+  }
 
   .divResto {
     margin-bottom: 40px;
@@ -251,6 +254,32 @@ h2 div {
     font-size: 1.2em;
   }
 }
+@media screen and (min-device-width: 375px) and (max-device-width: 650px) {
+  .secmenu {
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 374px) {
+  .secmenu {
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width: 374px) {
+  .secmenu {
+    margin-top: -17%;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
+  }
+
+  header div {
+    top: 1.5%;
+    left: 6%;
+  }
+
+  footer nav i {
+    width: 25px;
+  }
+}
 @media screen and (max-width: 321px) {
   .secmenu {
     margin-top: -16%;
@@ -274,9 +303,6 @@ h2 div {
 
   footer {
     font-size: 0.9em;
-  }
-  footer nav i {
-    width: 25px;
   }
 }
 @media all and (min-width: 1024px) {
