@@ -5,7 +5,8 @@ $argent : rgb(234,234,234);
 $lightblack : rgb(53,53,53);
 
 $radiusSize : 40px;
-$largeradiusSize : 80px;
+$largeradiusSize : 80px; 
+$smallRadiusSize : 20px; 
 $shadowSetting : 6px 6px 6px 6px rgba(0,0,0,0.1);
 
 body 
@@ -150,7 +151,7 @@ h2 {
 }
 
 .secmenu // Section pricipal utiliser dans la page menu pour afficher le contenue de la page
-    {
+{
         position: relative;
         z-index: 20;
         margin-top: -11%;
@@ -159,6 +160,7 @@ h2 {
         width: 100%;
         padding-top: 40px;
         background-color: white;
+
     
         h1,h2 {
             text-align: left;
@@ -168,6 +170,7 @@ h2 {
     
         aside {
             font-size: 0.9em;
+            min-width: 400px;
         }
     
         .divItem // Ici on retrouve le sass qui est lié au carte des plats 
@@ -182,13 +185,19 @@ h2 {
             flex-wrap: wrap;
             justify-content: space-between;
             font-size: larger;
+            padding-left: 8px;
+            padding-right: 8px;
+
             h3,p {
                 margin: 2%;
             }
     
             p {
-                width: fit-content;
                 margin-top: 1%;
+                overflow: hidden;
+                max-width: 75%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
     
             h3 {
@@ -197,8 +206,15 @@ h2 {
             }
         }
     
-    }
+}
 
+.a_com {
+    background: linear-gradient($rose, $violet);
+    padding: 20px;
+    border-radius: $radiusSize;
+    margin: 20px;
+    color: white;
+}
 
 
 
@@ -270,7 +286,14 @@ h2 {
     }
 
 
-    
+    .secmenu {
+        aside {
+            min-width: initial;
+        }
+        h3,p {
+            font-size: 0.7em;
+        }
+    }
 
     
     
@@ -284,6 +307,43 @@ h2 {
         font-size: 1.2em;
     }
 }
+
+@media screen and (max-width: 321px) 
+{
+    .secmenu {
+        margin-top: -16%;
+        border-top-right-radius: 60px;
+        border-top-left-radius: 60px;
+
+        .divItem {
+            border-radius: $smallRadiusSize;
+        }
+    }
+
+    header {
+        div {
+            top : 1%;
+        }
+    }
+}
+
+@media screen and (max-width: 280px) 
+{
+    .secmenu {
+        margin-top: -14%;
+        border-top-right-radius: $radiusSize;
+        border-top-left-radius: $radiusSize;
+    }
+    footer {
+        font-size: 0.9em;
+        nav { 
+            i {
+                width: 25px;
+            }
+        }
+    }
+}
+
 @media all and (min-width: 1024px)
 {
     section {

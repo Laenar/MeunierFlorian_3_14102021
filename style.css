@@ -147,6 +147,7 @@ h2 div {
 }
 .secmenu aside {
   font-size: 0.9em;
+  min-width: 400px;
 }
 .secmenu .divItem {
   width: 90%;
@@ -159,17 +160,30 @@ h2 div {
   flex-wrap: wrap;
   justify-content: space-between;
   font-size: larger;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 .secmenu .divItem h3, .secmenu .divItem p {
   margin: 2%;
 }
 .secmenu .divItem p {
-  width: fit-content;
   margin-top: 1%;
+  overflow: hidden;
+  max-width: 75%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .secmenu .divItem h3 {
   width: 100%;
   margin-bottom: 1%;
+}
+
+.a_com {
+  background: linear-gradient(#ff79da, #9356DC);
+  padding: 20px;
+  border-radius: 40px;
+  margin: 20px;
+  color: white;
 }
 
 @media screen and (min-height: 801px) {
@@ -224,10 +238,45 @@ h2 div {
   .asiFaceB div {
     width: -moz-available;
   }
+
+  .secmenu aside {
+    min-width: initial;
+  }
+  .secmenu h3, .secmenu p {
+    font-size: 0.7em;
+  }
 }
 @media screen and (max-width: 400px) {
   body {
     font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 321px) {
+  .secmenu {
+    margin-top: -16%;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
+  }
+  .secmenu .divItem {
+    border-radius: 20px;
+  }
+
+  header div {
+    top: 1%;
+  }
+}
+@media screen and (max-width: 280px) {
+  .secmenu {
+    margin-top: -14%;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+  footer nav i {
+    width: 25px;
   }
 }
 @media all and (min-width: 1024px) {
