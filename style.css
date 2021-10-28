@@ -306,6 +306,21 @@ h2 div {
   }
 }
 @media all and (min-width: 1024px) {
+  header {
+    position: absolute;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    z-index: 20;
+    width: 100%;
+    background-color: white;
+  }
+  header div {
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    font-size: 1.5em;
+  }
+
   section {
     display: flex;
     flex-wrap: wrap;
