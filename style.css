@@ -1,25 +1,20 @@
 body {
   margin: 0;
-  font-size: 2.2em;
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
 
-header {
-  padding-top: 2%;
+img {
+  object-fit: cover;
 }
-header img {
-  width: 50%;
-  padding: 5px;
+
+a {
+  text-decoration: none;
 }
 
 section {
   width: 90%;
   margin: auto;
-}
-
-a {
-  text-decoration: none;
 }
 
 footer {
@@ -57,8 +52,6 @@ footer nav i {
   border-radius: 40px;
   box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
   text-align: left;
-  margin-bottom: 40px;
-  height: 250px;
 }
 .divResto img {
   border-top-left-radius: 40px;
@@ -69,7 +62,6 @@ footer nav i {
 }
 .divResto h3, .divResto p {
   margin: 0;
-  margin-left: 30px;
 }
 .divResto .div_info_carte {
   display: flex;
@@ -80,9 +72,6 @@ footer nav i {
 .divResto .div_info_carte div {
   width: auto;
 }
-.divResto .div_info_carte div i {
-  margin-right: 20px;
-}
 
 .secFace {
   width: 100%;
@@ -92,9 +81,8 @@ footer nav i {
   margin: auto;
 }
 .secFace a {
-  background-color: #9356DC;
+  background: linear-gradient(#ff79da, #9356DC);
   color: white;
-  padding: 20px;
   border-radius: 80px;
 }
 
@@ -106,7 +94,6 @@ footer nav i {
   padding: 30px;
   border-radius: 40px;
   background-color: #eaeaea;
-  width: -moz-available;
   margin: auto;
   margin-bottom: 20px;
 }
@@ -116,9 +103,92 @@ footer nav i {
   background-color: #eaeaea;
 }
 
-@media screen and (max-height: 650px) {
+.secmea {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+.secmea .imgAvant {
+  width: 100%;
+}
+
+header {
+  padding-top: 10px;
+}
+header div {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  font-size: 1.5em;
+}
+header i {
+  color: black;
+}
+
+h2 div {
+  background-color: #99e2d0;
+  width: 30px;
+  height: 5px;
+}
+
+.secmenu {
+  position: relative;
+  z-index: 20;
+  margin-top: -11%;
+  border-top-right-radius: 80px;
+  border-top-left-radius: 80px;
+  width: 100%;
+  padding-top: 40px;
+  background-color: white;
+}
+.secmenu h1, .secmenu h2 {
+  text-align: left;
+  padding-left: 3.5%;
+}
+.secmenu aside {
+  font-size: 0.9em;
+  min-width: 400px;
+}
+.secmenu .divItem {
+  width: 90%;
+  margin: auto;
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  text-align: left;
+  margin-bottom: 6%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: larger;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.secmenu .divItem h3, .secmenu .divItem p {
+  margin: 2%;
+}
+.secmenu .divItem p {
+  margin-top: 1%;
+  overflow: hidden;
+  max-width: 75%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.secmenu .divItem h3 {
+  width: 100%;
+  margin-bottom: 1%;
+}
+
+.a_com {
+  background: linear-gradient(#ff79da, #9356DC);
+  padding: 20px;
+  border-radius: 40px;
+  margin: 20px;
+  color: white;
+}
+
+@media screen and (min-height: 801px) {
   .divResto {
-    height: 250px;
+    height: 600px;
   }
 }
 @media screen and (min-height: 651px) {
@@ -126,14 +196,193 @@ footer nav i {
     height: 450px;
   }
 }
-@media screen and (min-height: 801px) {
+@media all and (max-device-width: 650px) {
+  body {
+    font-size: 2.2em;
+  }
+
+  header {
+    padding-top: 2%;
+  }
+  header img {
+    width: 50%;
+    padding: 5px;
+  }
+  header div {
+    top: 2%;
+  }
+
   .divResto {
-    height: 600px;
+    margin-bottom: 40px;
+    height: 300px;
+  }
+  .divResto img {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    width: 100%;
+    max-height: 70%;
+    object-fit: cover;
+  }
+  .divResto h3, .divResto p {
+    margin-left: 30px;
+  }
+  .divResto .div_info_carte {
+    margin-top: -10px;
+  }
+  .divResto .div_info_carte div i {
+    margin-right: 20px;
+  }
+
+  .secFace a {
+    padding: 20px;
+    font-size: 1.5em;
+  }
+
+  .asiFaceB div {
+    width: -moz-available;
+  }
+
+  .secmenu aside {
+    min-width: initial;
+  }
+  .secmenu h3, .secmenu p {
+    font-size: 0.7em;
   }
 }
 @media screen and (max-width: 400px) {
   body {
     font-size: 1.2em;
+  }
+}
+@media screen and (min-device-width: 375px) and (max-device-width: 650px) {
+  .secmenu {
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 374px) {
+  .secmenu {
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width: 374px) {
+  .secmenu {
+    margin-top: -17%;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
+  }
+
+  header div {
+    top: 1.5%;
+    left: 6%;
+  }
+
+  footer nav i {
+    width: 25px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .secmenu {
+    margin-top: -16%;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
+  }
+  .secmenu .divItem {
+    border-radius: 20px;
+  }
+
+  header div {
+    top: 1%;
+  }
+}
+@media screen and (max-width: 280px) {
+  .secmenu {
+    margin-top: -14%;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+}
+@media all and (min-width: 1024px) {
+  header {
+    position: absolute;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    z-index: 20;
+    width: 100%;
+    background-color: white;
+  }
+  header div {
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    font-size: 1.5em;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .divResto {
+    height: 330px;
+    width: 25%;
+    margin: 2%;
+  }
+
+  .divResto .div_info_carte div {
+    width: auto;
+    margin: 5%;
+  }
+
+  footer nav img {
+    filter: invert(100%);
+    width: 10%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .asiFaceB {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .asiFaceB h2 {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .asiFaceB div {
+    width: 25%;
+    margin: initial;
+  }
+
+  .secFace {
+    font-size: 1.8em;
+  }
+  .secFace .div_loca {
+    width: 100%;
+  }
+  .secFace a {
+    padding: 20px;
+  }
+
+  .secmenu aside {
+    width: 28%;
+  }
+  .secmenu h1 {
+    width: 100%;
+  }
+  .secmenu .divItem {
+    padding: 5px;
+    border-radius: 30px;
+  }
+
+  .secmea img {
+    object-position: bottom;
+    height: 800px;
   }
 }
 

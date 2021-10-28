@@ -5,33 +5,31 @@ $argent : rgb(234,234,234);
 $lightblack : rgb(53,53,53);
 
 $radiusSize : 40px;
-$largeradiusSize : 80px;
+$largeradiusSize : 80px; 
+$smallRadiusSize : 20px; 
 $shadowSetting : 6px 6px 6px 6px rgba(0,0,0,0.1);
 
-body {
+body 
+{
     margin: 0;
-    font-size: 2.2em;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
-header {
-    padding-top: 2%;
-    //font-size: 3em;
-    img {
-        width: 50%;
-        padding: 5px;
-    }
+img 
+{
+    object-fit: cover;
 }
-section {
+a 
+{
+    text-decoration: none;
+}
+section 
+{
     width: 90%;
     margin: auto;
 }
-
-a {
-    text-decoration: none;
-}
-
-footer {
+footer 
+{
     background-color: $lightblack ;
     color: white;
     padding-top: 20px;
@@ -59,17 +57,13 @@ footer {
             width: 50px;
         }
     }
-
-
 }
-
-.divResto {
+.divResto 
+{
     width: 100%;
     border-radius: $radiusSize;
     box-shadow: $shadowSetting;
     text-align: left;
-    margin-bottom: 40px;
-    height: 250px;
     
     img {
         border-top-left-radius: $radiusSize;
@@ -80,7 +74,6 @@ footer {
     }
     h3, p {
         margin: 0;
-        margin-left: 30px;
     }
 
     .div_info_carte {
@@ -90,9 +83,6 @@ footer {
         align-items: center;
         div {
             width: auto;
-            i {
-                margin-right: 20px;
-            }
         }
     }
 }
@@ -105,11 +95,9 @@ footer {
         
     }
     a {
-        background-color: $violet;
+        background: linear-gradient($rose, $violet);
         color: white;
-        padding: 20px;
-        //font-size: 1.5em;
-        border-radius: $largeradiusSize;
+        border-radius: $largeradiusSize; 
     }
     
 }
@@ -121,21 +109,119 @@ footer {
         padding: 30px;
         border-radius: $radiusSize;
         background-color: $argent;
-        width: -moz-available;
         margin: auto;
         margin-bottom:20px ;
     }
 }
+
 .plocalisation {
     margin: 0;
     //font-size: 1.5em;
     background-color: $argent ;
 }
 
-@media screen and (max-height: 650px)
+.secmea {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    .imgAvant {
+        width: 100%;
+    }
+}
+
+header {
+    padding-top: 10px;
+    div {
+        position: absolute;
+        top: 3%;
+        left: 3%;
+        font-size: 1.5em;
+    }
+    i { 
+        color: black;
+    }
+}
+
+h2 {
+    div {
+        background-color: $cyan;
+        width: 30px;
+        height: 5px;
+    }
+}
+
+.secmenu // Section pricipal utiliser dans la page menu pour afficher le contenue de la page
+{
+        position: relative;
+        z-index: 20;
+        margin-top: -11%;
+        border-top-right-radius: $largeradiusSize;
+        border-top-left-radius: $largeradiusSize;
+        width: 100%;
+        padding-top: 40px;
+        background-color: white;
+
+    
+        h1,h2 {
+            text-align: left;
+            padding-left: 3.5%;
+    
+        }
+    
+        aside {
+            font-size: 0.9em;
+            min-width: 400px;
+        }
+    
+        .divItem // Ici on retrouve le sass qui est lié au carte des plats 
+        {
+            width: 90%;
+            margin: auto;
+            box-shadow: $shadowSetting;
+            border-radius: $radiusSize;
+            text-align: left;
+            margin-bottom: 6%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-size: larger;
+            padding-left: 8px;
+            padding-right: 8px;
+
+            h3,p {
+                margin: 2%;
+            }
+    
+            p {
+                margin-top: 1%;
+                overflow: hidden;
+                max-width: 75%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+    
+            h3 {
+                width: 100%;
+                margin-bottom: 1%;
+            }
+        }
+    
+}
+
+.a_com {
+    background: linear-gradient($rose, $violet);
+    padding: 20px;
+    border-radius: $radiusSize;
+    margin: 20px;
+    color: white;
+}
+
+
+
+@media screen and (min-height: 801px) //and (max-height: 900px) 
 {
     .divResto {
-        height: 250px;
+        height: 600px;
     }
 }
 @media screen and (min-height: 651px) //and (max-height: 900px) 
@@ -144,16 +230,236 @@ footer {
         height: 450px;
     }
 }
-@media screen and (min-height: 801px) //and (max-height: 900px) 
+@media all and (max-device-width: 650px)
 {
-    .divResto {
-        height: 600px;
+    body {
+        font-size: 2.2em;
     }
-}
+    header {
+        padding-top: 2%;
+        //font-size: 3em;
+        img {
+            width: 50%;
+            padding: 5px;
+        }
+        div {
+            top : 2%;
+        }
+    }
+    
+    .divResto {
+        margin-bottom: 40px;
+        height: 300px;
+        
+        img {
+            border-top-left-radius: $radiusSize;
+            border-top-right-radius: $radiusSize;
+            width: 100%;
+            max-height: 70%;
+            object-fit: cover;
+        }
+        h3, p {
+            margin-left: 30px;
+        }
+    
+        .div_info_carte {
+            margin-top: -10px;
+            div {
+                
+                i {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    
+    .secFace {
+        a {
+            padding: 20px;
+            font-size: 1.5em;
+        }
+    }
 
+
+
+    .asiFaceB {   
+        div {
+            width: -moz-available;
+        }
+    }
+
+
+    .secmenu {
+        aside {
+            min-width: initial;
+        }
+        h3,p {
+            font-size: 0.7em;
+        }
+    }
+
+    
+}
 @media screen and (max-width: 400px) //and (max-height: 900px) 
 {
     body {
         font-size: 1.2em;
     }
+}
+
+@media screen and (min-device-width: 375px) and (max-device-width: 650px)
+{
+    .secmenu {
+        font-size: 1.5em;
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 374px)
+{
+    .secmenu {
+        font-size: 1.1em;
+    }
+}
+@media screen and (max-width: 374px) 
+{
+    .secmenu {
+        margin-top: -17%;
+        border-top-right-radius: 60px;
+        border-top-left-radius: 60px;
+    }
+
+    header {
+        div {
+            top : 1.5%;
+            left: 6%;
+        }
+    }
+
+    footer {
+        nav { 
+            i {
+                width: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 321px) 
+{
+    .secmenu {
+        margin-top: -16%;
+        border-top-right-radius: 60px;
+        border-top-left-radius: 60px;
+
+        .divItem {
+            border-radius: $smallRadiusSize;
+        }
+    }
+
+    header {
+        div {
+            top : 1%;
+        }
+    }
+}
+@media screen and (max-width: 280px) 
+{
+    .secmenu {
+        margin-top: -14%;
+        border-top-right-radius: $radiusSize;
+        border-top-left-radius: $radiusSize;
+    }
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+
+
+@media all and (min-width: 1024px) /* CSS Version bureau */
+{
+
+    header {
+        position: absolute;
+        border-bottom-left-radius: 80px;
+        border-bottom-right-radius: 80px;
+        z-index: 20;
+        width: 100%;
+        background-color: white;
+
+        div {
+            position: absolute;
+            top: 30%;
+            left: 3%;
+            font-size: 1.5em;
+        }
+    }
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .divResto {
+        height: 330px;
+        width: 25%;
+        margin: 2%;
+    }
+
+    .divResto .div_info_carte div {
+        width: auto;
+        margin: 5%;
+    }
+
+    footer nav img {
+        filter: invert(100%);
+        width: 10%;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .asiFaceB {   
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        h2 {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        div {
+            width: 25%;
+            margin: initial
+        }
+    }
+
+    .secFace {
+        font-size: 1.8em;
+        .div_loca {
+            width: 100%;
+        }
+        a {
+            padding: 20px;
+        }
+    }
+
+    .secmenu {
+        aside {
+            width: 28%;
+        }
+        h1 {
+            width: 100%;
+        }
+        .divItem {
+            padding: 5px;
+            border-radius: 30px;
+        }
+    }
+
+    .secmea {
+        img {
+            object-position: bottom;
+            height: 800px;
+        }
+    }
+
+
 }
