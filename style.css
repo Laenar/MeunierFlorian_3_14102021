@@ -77,7 +77,7 @@ footer nav i {
   width: 100%;
 }
 .secFace .asiFace {
-  width: fit-content;
+  width: -moz-available;
   background-color: #f6f6f6;
   padding: 5%;
   padding-bottom: 10%;
@@ -214,6 +214,44 @@ h2 div {
   color: white;
 }
 
+.pFonx3 i {
+  color: #9356DC;
+}
+
+.Item1 {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  animation: anim 0.5s linear forwards 1s;
+}
+
+.Item2 {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  animation: anim 0.5s linear forwards 1.5s;
+}
+
+.Item3 {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  animation: anim 0.5s linear forwards 2s;
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0, -20px);
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
 @media screen and (min-height: 801px) {
   .divResto {
     height: 600px;
