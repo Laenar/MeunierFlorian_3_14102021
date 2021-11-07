@@ -1,3 +1,8 @@
+section, header, footer {
+  position: relative;
+  z-index: 10;
+}
+
 body {
   margin: 0;
   text-align: center;
@@ -218,6 +223,56 @@ h2 div {
   color: #9356DC;
 }
 
+.secLoad {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 100;
+  animation: screenLoad 1s linear forwards 3s;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.secLoad h1 {
+  width: 100%;
+}
+
+@keyframes screenLoad {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+    display: none;
+  }
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #9356DC;
+  /* Blue */
+  border-left: 16px solid #9356DC;
+  /* Blue */
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: spin 1.5s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .Item1 {
   position: relative;
   top: 100px;
@@ -250,6 +305,38 @@ h2 div {
   100% {
     opacity: 1;
     top: 0;
+  }
+}
+.a_resto {
+  position: relative;
+  z-index: 20;
+}
+
+.div_heart {
+  position: relative;
+  z-index: 30;
+  opacity: 1;
+  width: fit-content;
+  float: right;
+  right: 8%;
+  top: -18%;
+}
+
+.div_heart:active > .heartVide {
+  animation: heart;
+}
+
+.heartVide {
+  opacity: 1;
+}
+
+@keyframes heart {
+  0% {
+    opacity: 1;
+    background-color: red;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @media screen and (min-height: 801px) {
@@ -501,6 +588,10 @@ h2 div {
   .asiFaceB div {
     width: 70%;
     margin-bottom: 3%;
+  }
+
+  .div_loca p {
+    padding-top: 8%;
   }
 }
 @media screen and (min-width: 2000px) {
