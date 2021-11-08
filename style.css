@@ -323,25 +323,21 @@ h2 div {
   right: 8%;
   top: -20%;
 }
-
-input:checked + label > .empty_heart {
+.div_heart input:checked + label > .empty_heart {
   opacity: 1;
 }
-input:checked + label > .full_heart {
+.div_heart input:checked + label > .full_heart {
   opacity: 0;
 }
-
-.checki {
+.div_heart .checki {
   display: none;
 }
-
-.empty_heart {
+.div_heart .empty_heart {
   position: absolute;
   opacity: 0;
   font-size: 1.4em;
 }
-
-.full_heart {
+.div_heart .full_heart {
   background: -webkit-linear-gradient(#ff79da, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
