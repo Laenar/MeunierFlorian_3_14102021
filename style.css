@@ -312,6 +312,7 @@ h2 div {
 .a_resto {
   position: relative;
   z-index: 20;
+  color: black;
 }
 
 .div_heart {
