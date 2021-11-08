@@ -265,7 +265,7 @@ h2 {
     background-color: white;
     width: 100%;
     z-index: 100;
-    animation: screenLoad 1s linear forwards 3s;
+    animation: screenLoad 1s linear forwards 2s;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -295,21 +295,21 @@ h2 {
     position: relative;
     top: 100px;
     opacity:0;
-    animation: anim 0.5s linear forwards 1s;
+    animation: anim 0.5s linear forwards 3.5s;
     
 }
 .Item2 {
     position: relative;
     top: 100px;
     opacity:0;
-    animation: anim 0.5s linear forwards 1.5s;
+    animation: anim 0.5s linear forwards 4s;
     
 }
 .Item3 {
     position: relative;
     top: 100px;
     opacity:0;
-    animation: anim 0.5s linear forwards 2s;
+    animation: anim 0.5s linear forwards 4.5s;
     
 }
 @keyframes anim {
