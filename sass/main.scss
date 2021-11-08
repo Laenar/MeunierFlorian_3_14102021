@@ -109,6 +109,12 @@ footer
         background: linear-gradient($rose, $violet);
         color: white;
         border-radius: $largeradiusSize; 
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 0.8em;
+        max-width: 92%;
+        display: inline-block;
     }
     
 }
@@ -235,6 +241,7 @@ h2 {
     padding: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
+    overflow: hidden;
     i {
         margin-left: 5%;
         margin-right: 5%;
@@ -377,6 +384,7 @@ h2 {
         height: 450px;
     }
 }
+
 @media all and (max-device-width: 650px)
 {
     body {
@@ -402,11 +410,11 @@ h2 {
             border-top-left-radius: $radiusSize;
             border-top-right-radius: $radiusSize;
             width: 100%;
-            max-height: 70%;
+            max-height: 330px;
             object-fit: cover;
         }
         h3, p {
-            margin-left: 30px;
+            margin-left: 5%;
         }
     
         .div_info_carte {
@@ -441,6 +449,7 @@ h2 {
 
     
 }
+
 @media screen and (max-width: 400px) //and (max-height: 900px) 
 {
     body {
@@ -451,6 +460,50 @@ h2 {
 {
     .secmenu {
         font-size: 1.5em;
+    }
+    .asiFaceB {
+        div {
+            font-size: 1.3em;
+            width: 80%;
+        }
+    }
+    .pFonx {
+        span {
+            border-radius: 50px;
+        height: 50px;
+        width: 50px;
+        }
+    }
+    .divResto .div_info_carte div {
+        width: 70%;
+    }
+}
+@media all and (orientation: portrait) {
+    @media screen and (max-width: 374px) {
+        .divResto {
+            height: 300px;
+        }
+    }
+    @media screen and (max-width: 300px) {
+        .asiFaceB {
+            h2 {
+                font-size: 1.1em;
+            }
+        }
+        .divResto {
+            border-radius: $smallRadiusSize;
+            height: 210px;
+            
+            .div_info_carte {
+                margin-top: 2px;
+                font-size: 0.8em;
+            }
+            img {
+                border-top-left-radius: $smallRadiusSize;
+                border-top-right-radius: $smallRadiusSize;
+                height: 130px;
+            }
+        }
     }
 }
 @media screen and (min-width: 321px) and (max-width: 374px)
@@ -466,7 +519,26 @@ h2 {
         border-top-right-radius: 60px;
         border-top-left-radius: 60px;
     }
-
+    .secFace {
+        a {
+            font-size: 0.8em;
+        }
+        .asiFaceB {
+            div {
+                width: auto;
+                padding: 5px;
+            }
+            .pFonx {
+                left: -7%;
+                span {
+                    height: 20px;
+                    width: 23px;
+                    padding-bottom: 2px;
+                    padding-top: 0px;
+                }
+            }
+        }
+    }
     header {
         div {
             top : 1.5%;

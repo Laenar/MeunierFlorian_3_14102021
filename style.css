@@ -95,6 +95,12 @@ footer nav i {
   background: linear-gradient(#ff79da, #9356DC);
   color: white;
   border-radius: 80px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0.8em;
+  max-width: 92%;
+  display: inline-block;
 }
 
 .asiFaceB {
@@ -205,6 +211,7 @@ h2 div {
   padding: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
 }
 .pFonx i {
   margin-left: 5%;
@@ -384,11 +391,11 @@ h2 div {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     width: 100%;
-    max-height: 70%;
+    max-height: 330px;
     object-fit: cover;
   }
   .divResto h3, .divResto p {
-    margin-left: 30px;
+    margin-left: 5%;
   }
   .divResto .div_info_carte {
     margin-top: -10px;
@@ -422,6 +429,45 @@ h2 div {
   .secmenu {
     font-size: 1.5em;
   }
+
+  .asiFaceB div {
+    font-size: 1.3em;
+    width: 80%;
+  }
+
+  .pFonx span {
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .divResto .div_info_carte div {
+    width: 70%;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 374px) {
+  .divResto {
+    height: 300px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 300px) {
+  .asiFaceB h2 {
+    font-size: 1.1em;
+  }
+
+  .divResto {
+    border-radius: 20px;
+    height: 210px;
+  }
+  .divResto .div_info_carte {
+    margin-top: 2px;
+    font-size: 0.8em;
+  }
+  .divResto img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 130px;
+  }
 }
 @media screen and (min-width: 321px) and (max-width: 374px) {
   .secmenu {
@@ -433,6 +479,23 @@ h2 div {
     margin-top: -17%;
     border-top-right-radius: 60px;
     border-top-left-radius: 60px;
+  }
+
+  .secFace a {
+    font-size: 0.8em;
+  }
+  .secFace .asiFaceB div {
+    width: auto;
+    padding: 5px;
+  }
+  .secFace .asiFaceB .pFonx {
+    left: -7%;
+  }
+  .secFace .asiFaceB .pFonx span {
+    height: 20px;
+    width: 23px;
+    padding-bottom: 2px;
+    padding-top: 0px;
   }
 
   header div {
