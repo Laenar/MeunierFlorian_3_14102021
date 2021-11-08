@@ -320,6 +320,8 @@ h2 {
     position: relative;
     z-index: 20;
 }
+
+
 .div_heart {
     position: relative;
     z-index: 30;
@@ -327,17 +329,33 @@ h2 {
     width: fit-content;
     float: right;
     right: 8%;
-    top: -18%;
+    top: -20%;
 }
-.div_heart:active {
-    &>.heartVide{
-        animation: heart;
+input:checked + label {
+    &>.checki1 {
+        opacity: 1;
     }
-    
+    &>.checki2 {
+        opacity: 0;
+    }
+  
 }
-.heartVide {
-    opacity: 1;
+
+.checki {
+    display: none;
 }
+.checki1 {
+    position: absolute;
+    opacity: 0;
+    font-size: 1.4em;
+}
+.checki2 {
+    background: -webkit-linear-gradient($rose, $violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-size: 1.4em;
+}
+
 
 @keyframes heart {
     0%  {opacity:1; background-color: red;}

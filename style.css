@@ -319,15 +319,31 @@ h2 div {
   width: fit-content;
   float: right;
   right: 8%;
-  top: -18%;
+  top: -20%;
 }
 
-.div_heart:active > .heartVide {
-  animation: heart;
-}
-
-.heartVide {
+input:checked + label > .checki1 {
   opacity: 1;
+}
+input:checked + label > .checki2 {
+  opacity: 0;
+}
+
+.checki {
+  display: none;
+}
+
+.checki1 {
+  position: absolute;
+  opacity: 0;
+  font-size: 1.4em;
+}
+
+.checki2 {
+  background: -webkit-linear-gradient(#ff79da, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.4em;
 }
 
 @keyframes heart {
