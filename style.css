@@ -203,6 +203,8 @@ h2 div {
   left: -50px;
   margin: 0px;
   padding: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .pFonx i {
   margin-left: 5%;
@@ -322,10 +324,10 @@ h2 div {
   top: -20%;
 }
 
-input:checked + label > .checki1 {
+input:checked + label > .empty_heart {
   opacity: 1;
 }
-input:checked + label > .checki2 {
+input:checked + label > .full_heart {
   opacity: 0;
 }
 
@@ -333,34 +335,30 @@ input:checked + label > .checki2 {
   display: none;
 }
 
-.checki1 {
+.empty_heart {
   position: absolute;
   opacity: 0;
   font-size: 1.4em;
 }
 
-.checki2 {
+.full_heart {
   background: -webkit-linear-gradient(#ff79da, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.4em;
 }
 
-@keyframes heart {
-  0% {
-    opacity: 1;
-    background-color: red;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 @media screen and (min-height: 801px) {
   .divResto {
     height: 600px;
   }
 }
 @media screen and (min-height: 651px) {
+  .divResto {
+    height: 450px;
+  }
+}
+@media screen and (max-height: 651px) {
   .divResto {
     height: 450px;
   }
@@ -408,7 +406,7 @@ input:checked + label > .checki2 {
   }
 
   .asiFaceB div {
-    width: -moz-available;
+    width: max-content;
   }
 
   .secmenu aside {
@@ -485,6 +483,11 @@ input:checked + label > .checki2 {
 
   #asiFaceB div {
     width: 70%;
+    font-size: 1.55em;
+  }
+  #asiFaceB .pFonx span {
+    padding-top: 0;
+    height: 40px;
   }
 
   .divResto {
