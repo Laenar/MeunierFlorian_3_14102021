@@ -1,12 +1,12 @@
-section, header, footer {
-  position: relative;
-  z-index: 10;
-}
-
 body {
   margin: 0;
   text-align: center;
   font-family: "Roboto", sans-serif;
+}
+
+header, section, footer {
+  position: relative;
+  z-index: 10;
 }
 
 img {
@@ -332,9 +332,13 @@ h2 div {
   top: -20%;
 }
 .div_heart input:checked + label > .empty_heart {
+  animation: annimheart;
+  animation-duration: 1s;
   opacity: 1;
 }
 .div_heart input:checked + label > .full_heart {
+  animation: annimEmptyheart;
+  animation-duration: 1s;
   opacity: 0;
 }
 .div_heart .checki {
@@ -351,7 +355,55 @@ h2 div {
   -webkit-text-fill-color: transparent;
   font-size: 1.4em;
 }
+@keyframes annimheart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes annimEmptyheart {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
+.checkMenu {
+  display: none;
+  width: 20%;
+  height: 93px;
+  background-color: #99e2d0;
+  position: relative;
+  top: -48px;
+  right: -11px;
+  margin-bottom: -54px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.divItem:hover .checkMenu {
+  display: inline;
+  opacity: 0;
+  animation: checkingMenu 0.4s linear forwards 0s;
+}
+
+@keyframes checkingMenu {
+  0% {
+    opacity: 0;
+    right: -80px;
+  }
+  10% {
+    transform: translate(-40px, 0);
+  }
+  100% {
+    opacity: 1;
+    right: -11px;
+  }
+}
 @media screen and (min-height: 801px) {
   .divResto {
     height: 600px;
@@ -676,6 +728,22 @@ h2 div {
 @media screen and (min-width: 2000px) {
   .secmea img {
     height: 1100px;
+  }
+}
+@media screen and (min-width: 4000px) {
+  body {
+    font-size: 5em;
+  }
+
+  .asiFaceB {
+    font-size: 0.7em;
+  }
+
+  .divResto {
+    height: 900px;
+  }
+  .divResto img {
+    height: 600px;
   }
 }
 

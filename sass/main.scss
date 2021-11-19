@@ -9,15 +9,17 @@ $radiusSize : 40px;
 $largeradiusSize : 80px; 
 $smallRadiusSize : 20px; 
 $shadowSetting : 6px 6px 6px 6px rgba(0,0,0,0.1);
-section, header, footer {
-    position: relative;
-    z-index: 10;
-}
+
+
 body 
 {
     margin: 0;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+}
+header,section, footer {
+    position: relative;
+    z-index: 10;
 }
 img 
 {
@@ -342,9 +344,14 @@ h2 {
 
     input:checked + label {
         &>.empty_heart {
+            animation: annimheart;
+            animation-duration: 1s;
             opacity: 1;
         }
         &>.full_heart {
+            
+            animation: annimEmptyheart;
+            animation-duration: 1s;
             opacity: 0;
         }
       
@@ -363,8 +370,41 @@ h2 {
         -webkit-text-fill-color: transparent;
         font-size: 1.4em;
     }
+    @keyframes annimheart {
+        0%  {opacity:0;}
+        100% {opacity:1;}
+     }
+     @keyframes annimEmptyheart {
+        0%  {opacity:1;}
+        100% {opacity:0;}
+     }
 }
 
+
+.checkMenu {
+    display: none;
+    width: 20%;
+    height: 93px;
+    background-color: $cyan;
+    position: relative;
+    top: -48px;
+    right: -11px;
+    margin-bottom: -54px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.divItem:hover {
+    .checkMenu {
+        display: inline;
+        opacity:0;
+        animation: checkingMenu 0.4s linear forwards 0s;
+    }
+}
+@keyframes checkingMenu {
+    0%  {opacity:0; right: -80px; }
+    10%{ transform: translate(-40px, 0);}
+    100% {opacity:1; right: -11px;}
+ }
 
 @media screen and (min-height: 801px) //and (max-height: 900px) 
 {
@@ -449,7 +489,6 @@ h2 {
 
     
 }
-
 @media screen and (max-width: 400px) //and (max-height: 900px) 
 {
     body {
@@ -748,6 +787,21 @@ h2 {
     .secmea {
         img {
             height: 1100px;
+        }
+    }
+}
+
+@media screen and (min-width: 4000px) {
+    body {
+        font-size: 5em;
+    }
+    .asiFaceB {
+        font-size: 0.7em;
+    }
+    .divResto {
+        height: 900px;
+        img {
+            height: 600px;
         }
     }
 }
