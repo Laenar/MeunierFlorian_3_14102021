@@ -286,21 +286,21 @@ h2 div {
   position: relative;
   top: 100px;
   opacity: 0;
-  animation: anim 0.5s linear forwards 3.5s;
+  animation: anim 0.5s linear forwards 1.5s;
 }
 
 .Item2 {
   position: relative;
   top: 100px;
   opacity: 0;
-  animation: anim 0.5s linear forwards 4s;
+  animation: anim 0.5s linear forwards 2s;
 }
 
 .Item3 {
   position: relative;
   top: 100px;
   opacity: 0;
-  animation: anim 0.5s linear forwards 4.5s;
+  animation: anim 0.5s linear forwards 2.5s;
 }
 
 @keyframes anim {
@@ -372,7 +372,7 @@ h2 div {
   }
 }
 
-.checkMenu {
+.divItem .checkMenu {
   display: none;
   width: 20%;
   height: 93px;
@@ -384,13 +384,39 @@ h2 div {
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
 }
-
+.divItem .checkMenu i {
+  color: white;
+  text-align: center;
+}
+.divItem .checkMenu div {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.divItem:hover .pPrix {
+  position: relative;
+  right: -80px;
+  animation: checkingPrix 0.6s linear forwards 0s;
+}
 .divItem:hover .checkMenu {
   display: inline;
   opacity: 0;
-  animation: checkingMenu 0.4s linear forwards 0s;
+  animation: checkingMenu 0.6s linear forwards 0s;
 }
-
+.divItem:hover i {
+  animation: spincheckingMenu 0.6s linear forwards 0s;
+}
+@keyframes checkingPrix {
+  0% {
+    right: -80px;
+    transform: translate(80px, 0);
+  }
+  100% {
+    right: 0px;
+  }
+}
 @keyframes checkingMenu {
   0% {
     opacity: 0;
@@ -404,6 +430,15 @@ h2 div {
     right: -11px;
   }
 }
+@keyframes spincheckingMenu {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media screen and (min-height: 801px) {
   .divResto {
     height: 600px;

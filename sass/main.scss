@@ -304,21 +304,21 @@ h2 {
     position: relative;
     top: 100px;
     opacity:0;
-    animation: anim 0.5s linear forwards 3.5s;
+    animation: anim 0.5s linear forwards 1.5s;
     
 }
 .Item2 {
     position: relative;
     top: 100px;
     opacity:0;
-    animation: anim 0.5s linear forwards 4s;
+    animation: anim 0.5s linear forwards 2s;
     
 }
 .Item3 {
     position: relative;
     top: 100px;
     opacity:0;
-    animation: anim 0.5s linear forwards 4.5s;
+    animation: anim 0.5s linear forwards 2.5s;
     
 }
 @keyframes anim {
@@ -354,7 +354,6 @@ h2 {
             animation-duration: 1s;
             opacity: 0;
         }
-      
     }
     .checki {
         display: none;
@@ -381,30 +380,95 @@ h2 {
 }
 
 
-.checkMenu {
-    display: none;
-    width: 20%;
-    height: 93px;
-    background-color: $cyan;
-    position: relative;
-    top: -48px;
-    right: -11px;
-    margin-bottom: -54px;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-}
-.divItem:hover {
+
+
+.divItem {
     .checkMenu {
-        display: inline;
-        opacity:0;
-        animation: checkingMenu 0.4s linear forwards 0s;
+        display: none;
+        width: 20%;
+        height: 93px;
+        background-color: $cyan;
+        position: relative;
+        top: -48px;
+        right: -11px;
+        margin-bottom: -54px;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+        i {
+            color: white;
+            text-align: center;
+        }
+        div {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+
+    &:hover {
+        .pPrix {
+            position: relative;
+            right: -80px;
+            animation: checkingPrix 0.6s linear forwards 0s;
+            
+        }
+        .checkMenu {
+            display: inline;
+            opacity:0;
+            animation: checkingMenu 0.6s linear forwards 0s;
+        }
+    
+        i {
+            animation: spincheckingMenu 0.6s linear forwards 0s;
+        }
+    }
+
+    @keyframes checkingPrix {
+        0%  { right: -80px; transform: translate(80px, 0); }
+        100% { right: 0px;}
+    }
+    @keyframes checkingMenu {
+        0%  {opacity:0; right: -80px; }
+        10%{ transform: translate(-40px, 0);}
+        100% {opacity:1; right: -11px;}
+    }
+    @keyframes spincheckingMenu {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
     }
 }
-@keyframes checkingMenu {
-    0%  {opacity:0; right: -80px; }
-    10%{ transform: translate(-40px, 0);}
-    100% {opacity:1; right: -11px;}
- }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-height: 801px) //and (max-height: 900px) 
 {
