@@ -54,13 +54,13 @@ footer nav i {
 
 .divResto {
   width: 100%;
-  border-radius: 40px;
-  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
 .divResto img {
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   width: 100%;
   max-height: 70%;
   object-fit: cover;
@@ -94,7 +94,7 @@ footer nav i {
 .secFace a {
   background: linear-gradient(#ff79da, #9356DC);
   color: white;
-  border-radius: 80px;
+  border-radius: 40px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -109,7 +109,7 @@ footer nav i {
 .asiFaceB div {
   text-align: center;
   padding: 30px;
-  border-radius: 40px;
+  border-radius: 20px;
   background-color: #eaeaea;
   margin: auto;
   margin-bottom: 20px;
@@ -152,8 +152,8 @@ h2 div {
   position: relative;
   z-index: 20;
   margin-top: -11%;
-  border-top-right-radius: 80px;
-  border-top-left-radius: 80px;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
   width: 100%;
   padding-top: 40px;
   background-color: white;
@@ -169,8 +169,8 @@ h2 div {
 .secmenu .divItem {
   width: 90%;
   margin: auto;
-  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 40px;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
   text-align: left;
   margin-bottom: 6%;
   display: flex;
@@ -178,7 +178,6 @@ h2 div {
   justify-content: space-between;
   font-size: larger;
   padding-left: 8px;
-  padding-right: 8px;
 }
 .secmenu .divItem h3, .secmenu .divItem p {
   margin: 2%;
@@ -198,9 +197,12 @@ h2 div {
 .a_com {
   background: linear-gradient(#ff79da, #9356DC);
   padding: 20px;
-  border-radius: 40px;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 20px;
   margin: 20px;
   color: white;
+  font-size: 1.2em;
 }
 
 .pFonx {
@@ -219,7 +221,7 @@ h2 div {
 }
 .pFonx span {
   background-color: #9356DC;
-  border-radius: 40px;
+  border-radius: 20px;
   height: 36px;
   width: 40px;
   display: inline-block;
@@ -334,19 +336,18 @@ h2 div {
 .div_heart input:checked + label > .empty_heart {
   animation: annimheart;
   animation-duration: 1s;
-  opacity: 1;
+  opacity: 0;
 }
 .div_heart input:checked + label > .full_heart {
   animation: annimEmptyheart;
   animation-duration: 1s;
-  opacity: 0;
+  opacity: 1;
 }
 .div_heart .checki {
   display: none;
 }
 .div_heart .empty_heart {
   position: absolute;
-  opacity: 0;
   font-size: 1.4em;
 }
 .div_heart .full_heart {
@@ -354,35 +355,40 @@ h2 div {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.4em;
+  opacity: 0;
 }
 @keyframes annimheart {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 @keyframes annimEmptyheart {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
+.divItem {
+  overflow: hidden;
+}
 .divItem .checkMenu {
   display: none;
   width: 20%;
-  height: 93px;
+  height: 95px;
   background-color: #99e2d0;
   position: relative;
-  top: -48px;
+  top: -50px;
   right: -11px;
   margin-bottom: -54px;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
+  cursor: pointer;
 }
 .divItem .checkMenu i {
   color: white;
@@ -395,6 +401,20 @@ h2 div {
   flex-direction: column;
   height: 100%;
 }
+.divItem label {
+  width: -moz-available;
+  border-radius: 20px;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: larger;
+  margin: 0;
+  cursor: pointer;
+}
+.divItem .pla__check {
+  display: none;
+}
 .divItem:hover .pPrix {
   position: relative;
   right: -80px;
@@ -406,6 +426,19 @@ h2 div {
   animation: checkingMenu 0.6s linear forwards 0s;
 }
 .divItem:hover i {
+  animation: spincheckingMenu 0.6s linear forwards 0s;
+}
+.divItem input:checked + label > .pPrix {
+  position: relative;
+  right: -80px;
+  animation: checkingPrix 0.6s linear forwards 0s;
+}
+.divItem input:checked + label > .checkMenu {
+  display: inline;
+  opacity: 0;
+  animation: checkingMenu 0.6s linear forwards 0s;
+}
+.divItem input:checked + label > i {
   animation: spincheckingMenu 0.6s linear forwards 0s;
 }
 @keyframes checkingPrix {
@@ -475,8 +508,8 @@ h2 div {
     height: 500px;
   }
   .divResto img {
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     width: 100%;
     max-height: 330px;
     object-fit: cover;
@@ -543,7 +576,7 @@ h2 div {
   }
 
   .divResto {
-    border-radius: 20px;
+    border-radius: 10px;
     height: 210px;
   }
   .divResto .div_info_carte {
@@ -551,8 +584,8 @@ h2 div {
     font-size: 0.8em;
   }
   .divResto img {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     height: 130px;
   }
 }
@@ -601,7 +634,7 @@ h2 div {
     border-top-left-radius: 60px;
   }
   .secmenu .divItem {
-    border-radius: 20px;
+    border-radius: 10px;
   }
 
   header div {
@@ -611,8 +644,8 @@ h2 div {
 @media screen and (max-width: 280px) {
   .secmenu {
     margin-top: -14%;
-    border-top-right-radius: 40px;
-    border-top-left-radius: 40px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
   }
 
   footer {
@@ -719,6 +752,9 @@ h2 div {
   .secFace {
     font-size: 1.8em;
   }
+  .secFace .asiFace {
+    padding-bottom: 5%;
+  }
   .secFace .div_loca {
     width: 100%;
   }
@@ -733,7 +769,6 @@ h2 div {
     width: 100%;
   }
   .secmenu .divItem {
-    padding: 5px;
     border-radius: 30px;
   }
 
