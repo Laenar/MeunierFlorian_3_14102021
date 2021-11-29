@@ -10,6 +10,9 @@ $largeradiusSize : 40px;
 $smallRadiusSize : 10px; 
 $shadowSetting : 3px 3px 3px 3px rgba(0,0,0,0.1);
 
+$asideBaseWidth : 28;
+$divItemBaseHeight : 92;
+
 
 body 
 {
@@ -390,14 +393,11 @@ h2 {
     .checkMenu {
         display: none;
         width: 20%;
-        height: 95px;
+        height: 101%;
         background-color: $cyan;
-        position: relative;
-        top: -50px;
+        position: absolute;
+        top: 0;
         right: -11px;
-        margin-bottom: -54px;
-        border-top-right-radius: $largeradiusSize;
-        border-bottom-right-radius: $largeradiusSize;
         cursor: pointer;
         i {
             color: white;
@@ -426,24 +426,6 @@ h2 {
         display: none;
     }
 
-    &:hover {
-        .pPrix {
-            position: relative;
-            right: -80px;
-            animation: checkingPrix 0.6s linear forwards 0s;
-            
-        }
-        .checkMenu {
-            display: inline;
-            opacity:0;
-            animation: checkingMenu 0.6s linear forwards 0s;
-        }
-    
-        i {
-            animation: spincheckingMenu 0.6s linear forwards 0s;
-        }
-    }
-
     input:checked + label {
         &>.pPrix {
             position: relative;
@@ -461,9 +443,29 @@ h2 {
         }
     }
 
+
+    &:hover {
+        .pPrix {
+            position: relative;
+            right: 22%;
+            animation: checkingPrix 0.6s linear forwards 0s;
+            
+        }
+        .checkMenu {
+            display: inline;
+            animation: checkingMenu 0.6s linear forwards 0s;
+            opacity:1;
+            right: 80px;
+        }
+    
+        i {
+            animation: spincheckingMenu 0.6s linear forwards 0s;
+        }
+    }
+
     @keyframes checkingPrix {
-        0%  { right: -80px; transform: translate(80px, 0); }
-        100% { right: 0px;}
+        0%  { right: -22%; transform: translate(22%, 0); }
+        100% { right: 22%;}
     }
     @keyframes checkingMenu {
         0%  {opacity:0; right: -80px; }
@@ -674,6 +676,12 @@ h2 {
         .divItem {
             border-radius: $smallRadiusSize;
         }
+        .checkMenu {
+            i {
+                font-size: 0.65em;
+                margin-left: -20%;
+            }
+        }
     }
 
     header {
@@ -731,7 +739,10 @@ h2 {
      }
  }
 }
-@media all and (min-width: 1024px) /* CSS Version bureau */
+
+
+/* CSS Version bureau */
+@media all and (min-width: 1024px) 
 {
 
     .div_loca {
@@ -819,16 +830,16 @@ h2 {
 
     .secmenu {
         aside {
-            width: 28%;
+            width: $asideBaseWidth +21%;
         }
         h1 {
             width: 100%;
         }
         .divItem {
+            height: $divItemBaseHeight + 20px;
             border-radius: 30px;
         }
     }
-
     .secmea {
         img {
             object-position: bottom;
@@ -855,6 +866,47 @@ h2 {
     .div_loca p {
         padding-top: 8%;
     }
+
+    .secmenu {
+        aside {
+            width: $asideBaseWidth +21%;
+        }
+        .divItem  {
+            height: $divItemBaseHeight + 20px;
+        }
+    }
+}
+@media all and (min-width: 1281px) and (max-width: 1350px) {
+    .secmenu {
+        aside {
+            width: $asideBaseWidth +15%;
+        }
+        .divItem  {
+            height: $divItemBaseHeight + 0px;
+        }
+    }
+}
+@media all and (min-width: 1351px) and (max-width: 1680px) {
+    .secmenu {
+        aside {
+            width: $asideBaseWidth +5%;
+        }
+        .divItem  {
+            height: $divItemBaseHeight + 0px;
+        }
+    }
+}
+
+
+@media all and (min-width: 1681px) {
+    .secmenu {
+        aside {
+            width: $asideBaseWidth+0%;
+        }
+        .divItem  {
+            height: $divItemBaseHeight + 0px;
+        }
+    }
 }
 @media screen and (min-width: 2000px) {
     .secmea {
@@ -863,7 +915,6 @@ h2 {
         }
     }
 }
-
 @media screen and (min-width: 4000px) {
     body {
         font-size: 5em;

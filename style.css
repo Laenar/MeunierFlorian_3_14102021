@@ -380,14 +380,11 @@ h2 div {
 .divItem .checkMenu {
   display: none;
   width: 20%;
-  height: 95px;
+  height: 101%;
   background-color: #99e2d0;
-  position: relative;
-  top: -50px;
+  position: absolute;
+  top: 0;
   right: -11px;
-  margin-bottom: -54px;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
   cursor: pointer;
 }
 .divItem .checkMenu i {
@@ -415,19 +412,6 @@ h2 div {
 .divItem .pla__check {
   display: none;
 }
-.divItem:hover .pPrix {
-  position: relative;
-  right: -80px;
-  animation: checkingPrix 0.6s linear forwards 0s;
-}
-.divItem:hover .checkMenu {
-  display: inline;
-  opacity: 0;
-  animation: checkingMenu 0.6s linear forwards 0s;
-}
-.divItem:hover i {
-  animation: spincheckingMenu 0.6s linear forwards 0s;
-}
 .divItem input:checked + label > .pPrix {
   position: relative;
   right: -80px;
@@ -441,13 +425,27 @@ h2 div {
 .divItem input:checked + label > i {
   animation: spincheckingMenu 0.6s linear forwards 0s;
 }
+.divItem:hover .pPrix {
+  position: relative;
+  right: 22%;
+  animation: checkingPrix 0.6s linear forwards 0s;
+}
+.divItem:hover .checkMenu {
+  display: inline;
+  animation: checkingMenu 0.6s linear forwards 0s;
+  opacity: 1;
+  right: 80px;
+}
+.divItem:hover i {
+  animation: spincheckingMenu 0.6s linear forwards 0s;
+}
 @keyframes checkingPrix {
   0% {
-    right: -80px;
-    transform: translate(80px, 0);
+    right: -22%;
+    transform: translate(22%, 0);
   }
   100% {
-    right: 0px;
+    right: 22%;
   }
 }
 @keyframes checkingMenu {
@@ -636,6 +634,10 @@ h2 div {
   .secmenu .divItem {
     border-radius: 10px;
   }
+  .secmenu .checkMenu i {
+    font-size: 0.65em;
+    margin-left: -20%;
+  }
 
   header div {
     top: 1%;
@@ -683,6 +685,7 @@ h2 div {
     width: 25px;
   }
 }
+/* CSS Version bureau */
 @media all and (min-width: 1024px) {
   .div_loca p {
     padding-top: 5%;
@@ -763,12 +766,13 @@ h2 div {
   }
 
   .secmenu aside {
-    width: 28%;
+    width: 49%;
   }
   .secmenu h1 {
     width: 100%;
   }
   .secmenu .divItem {
+    height: 112px;
     border-radius: 30px;
   }
 
@@ -793,6 +797,37 @@ h2 div {
 
   .div_loca p {
     padding-top: 8%;
+  }
+
+  .secmenu aside {
+    width: 49%;
+  }
+  .secmenu .divItem {
+    height: 112px;
+  }
+}
+@media all and (min-width: 1281px) and (max-width: 1350px) {
+  .secmenu aside {
+    width: 43%;
+  }
+  .secmenu .divItem {
+    height: 92px;
+  }
+}
+@media all and (min-width: 1351px) and (max-width: 1680px) {
+  .secmenu aside {
+    width: 33%;
+  }
+  .secmenu .divItem {
+    height: 92px;
+  }
+}
+@media all and (min-width: 1681px) {
+  .secmenu aside {
+    width: 28%;
+  }
+  .secmenu .divItem {
+    height: 92px;
   }
 }
 @media screen and (min-width: 2000px) {
