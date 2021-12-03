@@ -12,17 +12,19 @@ $shadowSetting : 3px 3px 3px 3px rgba(0,0,0,0.1);
 
 $asideBaseWidth : 28;
 $divItemBaseHeight : 92;
-
+ 
 
 body 
 {
     margin: 0;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    
 }
 header,section, footer {
     position: relative;
     z-index: 10;
+    overflow: hidden;
 }
 img 
 {
@@ -346,6 +348,7 @@ h2 {
     float: right;
     right: 8%;
     top: -20%;
+    cursor: pointer;
 
     input:checked + label {
         &>.empty_heart {
@@ -385,9 +388,6 @@ h2 {
      }
 }
 
-
-
-
 .divItem {
     overflow: hidden;
     .checkMenu {
@@ -425,7 +425,6 @@ h2 {
     .pla__check {
         display: none;
     }
-
     input:checked + label {
         &>.pPrix {
             position: relative;
@@ -441,10 +440,16 @@ h2 {
         &>i {
             animation: spincheckingMenu 0.6s linear forwards 0s;
         }
+        p {
+            max-width: 65%;
+        }
     }
 
 
     &:hover {
+         p {
+            max-width: 65%;
+        }
         .pPrix {
             position: relative;
             right: 22%;
@@ -463,6 +468,7 @@ h2 {
         }
     }
 
+
     @keyframes checkingPrix {
         0%  { right: -22%; transform: translate(22%, 0); }
         100% { right: 22%;}
@@ -479,19 +485,19 @@ h2 {
 }
 
 
-@media screen and (min-height: 801px) //and (max-height: 900px) 
+@media screen and (min-height: 801px)
 {
     .divResto {
         height: 600px;
     }
 }
-@media screen and (min-height: 651px) //and (max-height: 900px) 
+@media screen and (min-height: 651px)
 {
     .divResto {
         height: 450px;
     }
 }
-@media screen and (max-height: 651px) //and (max-height: 900px) 
+@media screen and (max-height: 651px)
 {
     .divResto {
         height: 450px;
@@ -562,7 +568,7 @@ h2 {
 
     
 }
-@media screen and (max-width: 400px) //and (max-height: 900px) 
+@media screen and (max-width: 400px)
 {
     body {
         font-size: 1.2em;
@@ -830,7 +836,7 @@ h2 {
 
     .secmenu {
         aside {
-            width: $asideBaseWidth +21%;
+            width: $asideBaseWidth +40%;
         }
         h1 {
             width: 100%;
@@ -849,7 +855,7 @@ h2 {
 
 
 }
-@media all and (min-width: 1024px) and (max-width: 1280px) {
+@media all and (min-width: 1100px) and (max-width: 1280px) {
     body {
         font-size: 1.2em;
     }
