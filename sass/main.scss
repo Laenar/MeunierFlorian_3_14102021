@@ -412,6 +412,7 @@ h2 {
         }
     }
     label {
+        width: -webkit-fill-available;
         width: -moz-available;
         border-radius: 20px;
         text-align: left;
