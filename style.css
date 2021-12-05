@@ -140,6 +140,7 @@ header div {
   font-size: 1.5em;
 }
 header i {
+  margin-top: 10px;
   color: black;
 }
 
@@ -182,13 +183,13 @@ h2 div {
 }
 .secmenu .divItem h3, .secmenu .divItem p {
   margin: 2%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .secmenu .divItem p {
   margin-top: 1%;
-  overflow: hidden;
   max-width: 75%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .secmenu .divItem h3 {
   width: 100%;

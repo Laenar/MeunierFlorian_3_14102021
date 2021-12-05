@@ -162,6 +162,7 @@ header {
         font-size: 1.5em;
     }
     i { 
+        margin-top: 10px;
         color: black;
     }
 }
@@ -213,14 +214,15 @@ h2 {
 
             h3,p {
                 margin: 2%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
     
             p {
                 margin-top: 1%;
-                overflow: hidden;
                 max-width: 75%;
-                text-overflow: ellipsis;
-                white-space: nowrap;
+
             }
     
             h3 {
@@ -340,7 +342,7 @@ h2 {
     color: black;
 }
 
-.div_heart {
+.div_heart /*Elem div_heart Tous ce qui touche de près ou de loin au animation de cette div*/ {
     position: relative;
     z-index: 30;
     opacity: 1;
@@ -388,7 +390,7 @@ h2 {
      }
 }
 
-.divItem {
+.divItem /*Elem divItem Tous ce qui touche de près ou de loin au animation de cette div*/{
     overflow: hidden;
     .checkMenu {
         display: none;
