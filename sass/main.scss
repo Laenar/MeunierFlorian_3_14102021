@@ -9,6 +9,7 @@ $radiusSize : 20px;
 $largeradiusSize : 40px; 
 $smallRadiusSize : 10px; 
 $shadowSetting : 3px 3px 3px 3px rgba(0,0,0,0.1);
+$shadowHover : 6px 6px 6px 6px rgba(0,0,0,0.1);
 
 $asideBaseWidth : 28;
 $divItemBaseHeight : 92;
@@ -95,6 +96,10 @@ footer
         div {
             width: auto;
         }
+    }
+    &:hover {
+        box-shadow: $shadowHover;
+        transition-duration: 500ms;
     }
 }
 
@@ -243,6 +248,29 @@ h2 {
     color: white;
     font-size: 1.2em;
 }
+
+.a_com:hover{
+    box-shadow: $shadowSetting;
+    transition-duration: 500ms;
+    filter : brightness(120%);
+}
+.secFace a:hover {
+    box-shadow: $shadowSetting;
+    transition-duration: 500ms;
+    filter : brightness(120%);
+}
+
+.a_com:not(:hover){
+    box-shadow: $shadowSetting;
+    transition-duration: 500ms;
+    filter : brightness(100%);
+}
+.secFace a:not(:hover) {
+    box-shadow: $shadowSetting;
+    transition-duration: 500ms;
+    filter : brightness(100%);
+}
+
 
 .pFonx {
     text-align: left;
