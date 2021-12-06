@@ -148,10 +148,11 @@ header i {
   color: black;
 }
 
-h2 div {
+h2 div, h2 span {
   background-color: #99e2d0;
   width: 30px;
   height: 5px;
+  display: block;
 }
 
 .secmenu {

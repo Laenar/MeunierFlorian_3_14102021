@@ -173,10 +173,11 @@ header {
 }
 
 h2 {
-    div {
+    div, span{
         background-color: $cyan;
         width: 30px;
         height: 5px;
+        display: block;
     }
 }
 
