@@ -523,7 +523,7 @@ h2 div {
     height: 450px;
   }
 }
-@media all and (max-device-width: 650px) {
+@media all and (max-width: 650px) {
   body {
     font-size: 2.2em;
   }
