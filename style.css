@@ -581,7 +581,7 @@ h2 div {
     font-size: 1.2em;
   }
 }
-@media screen and (min-device-width: 375px) and (max-device-width: 650px) {
+@media screen and (min-width: 375px) and (max-width: 650px) {
   .secmenu {
     font-size: 1.5em;
   }
@@ -692,7 +692,7 @@ h2 div {
     font-size: 0.9em;
   }
 }
-@media all and (min-device-width: 651px) and (max-width: 1024px) {
+@media all and (min-width: 651px) and (max-width: 1024px) {
   body {
     font-size: 1.5em;
   }
