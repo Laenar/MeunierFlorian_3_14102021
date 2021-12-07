@@ -474,7 +474,21 @@ h2 {
     .pla__check {
         display: none;
     }
-    input:checked + label {
+
+    .divItem__ctn {
+        width: -webkit-fill-available;
+        width: -moz-available;
+        border-radius: 20px;
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: larger;
+        margin: 0;
+        cursor: pointer;
+    }
+    
+    input:checked + label{
         &>.pPrix {
             position: relative;
             right: -80px;
@@ -493,6 +507,27 @@ h2 {
             max-width: 65%;
         }
     }
+
+    input:checked + div{
+        .pPrix {
+            position: relative;
+            right: -80px;
+            animation: checkingPrix 0.6s linear forwards 0s;
+            
+        }
+        .checkMenu {
+            display: inline;
+            opacity:0;
+            animation: checkingMenu 0.6s linear forwards 0s;
+        }
+        i {
+            animation: spincheckingMenu 0.6s linear forwards 0s;
+        }
+        p {
+            max-width: 65%;
+        }
+    }
+
 
 
     &:hover {
@@ -516,8 +551,6 @@ h2 {
             animation: spincheckingMenu 0.6s linear forwards 0s;
         }
     }
-
-
     @keyframes checkingPrix {
         0%  { right: -22%; transform: translate(22%, 0); }
         100% { right: 22%;}
