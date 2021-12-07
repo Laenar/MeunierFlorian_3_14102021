@@ -408,6 +408,14 @@ h2 div, h2 span {
 
 .divItem {
   overflow: hidden;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  border-radius: 20px;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: larger;
 }
 .divItem .checkMenu {
   display: none;
@@ -441,6 +449,13 @@ h2 div, h2 span {
   font-size: larger;
   margin: 0;
   cursor: pointer;
+}
+.divItem .lab__checkMenu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .divItem .pla__check {
   display: none;

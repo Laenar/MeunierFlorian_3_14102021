@@ -421,6 +421,16 @@ h2 {
 
 .divItem /*Elem divItem Tous ce qui touche de près ou de loin au animation de cette div*/{
     overflow: hidden;
+
+    width: -webkit-fill-available;
+    width: -moz-available;
+    border-radius: 20px;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: larger;
+
     .checkMenu {
         display: none;
         width: 20%;
@@ -453,6 +463,13 @@ h2 {
         font-size: larger;
         margin: 0;
         cursor: pointer;
+    }
+    .lab__checkMenu {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
     .pla__check {
         display: none;
