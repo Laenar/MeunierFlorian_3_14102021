@@ -191,7 +191,12 @@ h2 {
         width: 100%;
         padding-top: 40px;
         background-color: white;
+        h1 {
 
+            padding-right: 4%;
+            display: flex;
+            justify-content: space-between;
+        }
     
         h1,h2 {
             text-align: left;
