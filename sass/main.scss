@@ -727,6 +727,11 @@ h2 {
 }
 @media screen and (min-width: 321px) and (max-width: 374px)
 {
+    .divResto {
+        img {
+            max-height: 200px;
+        }
+    }
     .secmenu {
         font-size: 1.1em;
     }
@@ -794,6 +799,11 @@ h2 {
     header {
         div {
             top : 1%;
+        }
+    }
+    .divResto {
+        img {
+            max-height: 200px;
         }
     }
 }

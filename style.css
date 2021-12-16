@@ -689,6 +689,10 @@ h2 div, h2 span {
   }
 }
 @media screen and (min-width: 321px) and (max-width: 374px) {
+  .divResto img {
+    max-height: 200px;
+  }
+
   .secmenu {
     font-size: 1.1em;
   }
@@ -742,6 +746,10 @@ h2 div, h2 span {
 
   header div {
     top: 1%;
+  }
+
+  .divResto img {
+    max-height: 200px;
   }
 }
 @media screen and (max-width: 280px) {
