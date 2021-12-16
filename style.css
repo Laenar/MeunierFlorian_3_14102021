@@ -111,9 +111,6 @@ footer nav i {
 .asiFaceB {
   text-align: left;
 }
-.asiFaceB .divfonx3 {
-  background-color: #d0c6dd;
-}
 .asiFaceB div {
   text-align: center;
   padding: 30px;
@@ -121,6 +118,9 @@ footer nav i {
   background-color: #eaeaea;
   margin: auto;
   margin-bottom: 20px;
+}
+.asiFaceB div:hover {
+  background-color: #d0c6dd;
 }
 
 .plocalisation {
