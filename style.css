@@ -111,6 +111,9 @@ footer nav i {
 .asiFaceB {
   text-align: left;
 }
+.asiFaceB .divfonx3 {
+  background-color: #d0c6dd;
+}
 .asiFaceB div {
   text-align: center;
   padding: 30px;
@@ -153,6 +156,17 @@ h2 div, h2 span {
   width: 30px;
   height: 5px;
   display: block;
+}
+
+.div_new {
+  position: absolute;
+  z-index: 30;
+  background-color: #99e2d0;
+  color: #008766;
+  padding-left: 1%;
+  padding-right: 1%;
+  right: 5%;
+  margin-top: 4%;
 }
 
 .secmenu {

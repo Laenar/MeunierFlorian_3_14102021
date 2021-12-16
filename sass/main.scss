@@ -1,9 +1,12 @@
 $violet :#9356DC;
+$light_violet :#d0c6dd;
 $rose : #ff79da;
 $cyan : #99e2d0;
+$dark_cyan : rgb(0,135,102);
 $argent : rgb(234,234,234);
 $argentWhite : rgb(246,246,246);
 $lightblack : rgb(53,53,53);
+
 
 $radiusSize : 20px;
 $largeradiusSize : 40px; 
@@ -133,6 +136,9 @@ footer
 .asiFaceB {
     text-align: left;
 
+    .divfonx3 {
+        background-color: $light_violet;
+    }
     div {
         text-align: center;
         padding: 30px;
@@ -181,6 +187,16 @@ h2 {
     }
 }
 
+.div_new {
+    position: absolute;
+    z-index: 30;
+    background-color: $cyan;
+    color: $dark_cyan;
+    padding-left: 1%;
+    padding-right: 1%;
+    right: 5%;
+    margin-top: 4%;
+}
 .secmenu // Section pricipal utiliser dans la page menu pour afficher le contenue de la page
 {
         position: relative;
@@ -276,8 +292,6 @@ h2 {
     transition-duration: 500ms;
     filter : brightness(100%);
 }
-
-
 .pFonx {
     text-align: left;
     position: relative;
