@@ -344,9 +344,9 @@ h2 {
     100% {opacity: 0; z-index: 0; display: none;}
 }
 .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid $violet; /* Blue */
-    border-left: 16px solid $violet; /* Blue */
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid $violet;
+    border-left: 16px solid $violet; 
     border-radius: 50%;
     width: 150px;
     height: 150px;

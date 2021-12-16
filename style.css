@@ -314,11 +314,8 @@ h2 div, h2 span {
 }
 .loader {
   border: 16px solid #f3f3f3;
-  /* Light grey */
   border-top: 16px solid #9356DC;
-  /* Blue */
   border-left: 16px solid #9356DC;
-  /* Blue */
   border-radius: 50%;
   width: 150px;
   height: 150px;
